@@ -15,4 +15,11 @@ public class GameTile : MonoBehaviour
     {
         
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name.Equals("Background"))
+        {
+            Destroy(GameObject.Find("Tile(Clone)"));
+        }
+    }
 }
