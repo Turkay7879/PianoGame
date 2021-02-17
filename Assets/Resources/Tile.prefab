@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -570119652327223957}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: FallingTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563760862273157010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4787, y: -4.241, z: 0}
+  m_LocalPosition: {x: -1.4787, y: -4.241, z: -1.1}
   m_LocalScale: {x: 0.9573345, y: 1.5634197, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

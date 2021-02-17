@@ -6,6 +6,7 @@ public class UserTile : MonoBehaviour
 {
     Vector3 Tile1, Tile2, Tile3, Tile4;
     Vector3 CurrentPosition;
+    public bool Touched = false;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,7 @@ public class UserTile : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
     }
 
     void Move()

@@ -7,6 +7,7 @@ public class GameManagement : MonoBehaviour
     public float TileSpeed = 5.00f;
     private float CreateDelay = 3.00f, CreateInterval = 1.00f;
     private bool CreatedTiles = false;
+    public int Lives = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,11 @@ public class GameManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Lives == 0)
+        {
+            Time.timeScale = 0;
+        }
+
         if (!CreatedTiles)
         {
             InvokeRepeating("CreateTiles", CreateDelay, CreateInterval);
