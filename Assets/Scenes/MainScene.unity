@@ -680,6 +680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93325ce670e2a14ea3d6acaac980eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource1: {fileID: 0}
+  audioSource2: {fileID: 0}
+  audioSource3: {fileID: 0}
+  audioSource4: {fileID: 0}
 --- !u!82 &863811992
 AudioSource:
   m_ObjectHideFlags: 0
@@ -692,7 +696,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: adbb8769396311c439a773d4679dca13, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.24
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -902,6 +906,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93325ce670e2a14ea3d6acaac980eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource1: {fileID: 0}
+  audioSource2: {fileID: 0}
+  audioSource3: {fileID: 0}
+  audioSource4: {fileID: 0}
 --- !u!82 &1247762843
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1233,6 +1241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93325ce670e2a14ea3d6acaac980eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource1: {fileID: 0}
+  audioSource2: {fileID: 0}
+  audioSource3: {fileID: 0}
+  audioSource4: {fileID: 0}
 --- !u!82 &1810009662
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1482,6 +1494,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93325ce670e2a14ea3d6acaac980eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource1: {fileID: 0}
+  audioSource2: {fileID: 0}
+  audioSource3: {fileID: 0}
+  audioSource4: {fileID: 0}
 --- !u!82 &1869851413
 AudioSource:
   m_ObjectHideFlags: 0
