@@ -70,7 +70,7 @@ public class GameManagement : MonoBehaviour
         else if (randomlane == 3) spot = 0.4953f;  //Tile3 x kordinat
         else spot = 1.4687f;                       //Tile4 x kordinat
         GameObject Tiles = (GameObject)Resources.Load("Tile", typeof(GameObject));
-        GameObject Tiles1 = Instantiate(Tiles, new Vector3(spot, 5.8f, 0f) ,Quaternion.identity); //
+        GameObject Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, 0f) ,Quaternion.identity); //
         Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
 
     }
