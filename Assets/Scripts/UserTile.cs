@@ -41,12 +41,10 @@ public class UserTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-
+        if(Time.timeScale != 0.0f)
+        {
+            Move();
+        }
     }
 
     void Move()

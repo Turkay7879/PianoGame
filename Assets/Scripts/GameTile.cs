@@ -24,10 +24,11 @@ public class GameTile : MonoBehaviour
     {
         if (collision.name.Equals("Background"))
         {
-            if (spriteRenderer.material.color != Color.green)
+            if (spriteRenderer.material.color != Color.green && Time.timeScale != 0)
             {
                 int live = management.Lives;
                 live--;
+                Debug.Log("canýn: " + live);
                 management.Lives = live;
             }
             

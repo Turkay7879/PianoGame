@@ -449,7 +449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 634492395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac53a2ca2744084f9f43019ea0112cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 066f45ba702b02241b96598928581bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &788617475
@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &796610149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,8 +947,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 634492400}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Continue
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1092,7 +1092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1651582044
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1193,7 +1193,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.64, y: 10.03}
+    oldSize: {x: 10.8, y: 19.2}
     newSize: {x: 5.64, y: 10.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1242,7 +1242,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c23ef84ada2aa0409afc0637e106aa9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e81b08eee5db1042b1c8b663b06f131, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
