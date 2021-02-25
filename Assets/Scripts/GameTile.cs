@@ -30,6 +30,7 @@ public class GameTile : MonoBehaviour
                 live--;
                 Debug.Log("canýn: " + live);
                 management.Lives = live;
+                management.LifeText.text = ": " + management.Lives.ToString();
             }
             
             Destroy(this.gameObject);
@@ -41,7 +42,8 @@ public class GameTile : MonoBehaviour
         if (collision.name.Equals("Player"))
         {
             spriteRenderer.material.SetColor("_Color", Color.green);
-            
+            management.Score++;
+            management.ScoreText.text = ": " + management.Score.ToString();
         }
          
     }

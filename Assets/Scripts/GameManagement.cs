@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagement : MonoBehaviour
 {
@@ -8,16 +9,23 @@ public class GameManagement : MonoBehaviour
     private float CreateDelay = 3.00f, CreateInterval = 1.00f;
     private bool CreatedTiles = false;
     public int Lives = 3;
+    public Text LifeText;
+    public int Score =0;
+    public Text ScoreText;
     public AudioSource[] sources;
     public bool isPaused = false;
     public GameObject canvas, bottomTiles , screenTiles;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         canvas = GameObject.Find("MainCanvas");
         bottomTiles = GameObject.Find("BottomTiles");
         screenTiles = GameObject.Find("ScreenTiles");
+        LifeText = GameObject.Find("LifeText").GetComponent<Text>();
+        LifeText.text = ": " + Lives.ToString();
+        ScoreText = GameObject.Find("ScoreText").GetComponent <Text>();
+        ScoreText.text = ": " + Score.ToString();
 
         sources = new AudioSource[4];
         for (int i = 0; i < 4; i++)
