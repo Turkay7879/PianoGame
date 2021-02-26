@@ -6,6 +6,9 @@ TagManager:
   tags:
   - FallingTile
   - BottomTile
+  - LifeTile
+  - StarTile
+  - BonusTile
   layers:
   - Default
   - TransparentFX

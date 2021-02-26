@@ -6,20 +6,20 @@ public class GameTile : MonoBehaviour
 {
     GameManagement management;
     SpriteRenderer spriteRenderer;
+    string TileType;
     
-    // Start is called before the first frame update
     void Start()
     {
         management = GameObject.Find("GameManagement").GetComponent<GameManagement>();
         spriteRenderer = this.GetComponent<SpriteRenderer>();
-        
+        TileType = gameObject.tag;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.name.Equals("Background"))
@@ -28,7 +28,6 @@ public class GameTile : MonoBehaviour
             {
                 int live = management.Lives;
                 live--;
-                Debug.Log("can�n: " + live);
                 management.Lives = live;
                 management.LifeText.text = ": " + management.Lives.ToString();
             }
@@ -42,7 +41,27 @@ public class GameTile : MonoBehaviour
         if (collision.name.Equals("Player"))
         {
             spriteRenderer.material.SetColor("_Color", Color.green);
-            management.Score++;
+            if (TileType.Equals("FallingTile"))
+            {
+                management.Score++;
+            }
+
+            else if (TileType.Equals("BonusTile"))
+            {
+                management.Score += 3; // Değiştirilebilir
+            }
+
+            else if (TileType.Equals("StarTile"))
+            {
+                management.Score += 5; // Değiştirilebilir
+            }
+
+            else if (TileType.Equals("LifeTile"))
+            {
+                management.Lives++; // Değiştirilebilir?
+                management.LifeText.text = ": " + management.Lives.ToString();
+            }
+            
             management.ScoreText.text = ": " + management.Score.ToString();
         }
          

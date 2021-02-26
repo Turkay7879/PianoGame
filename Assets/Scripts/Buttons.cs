@@ -26,7 +26,7 @@ public class Buttons : MonoBehaviour
     public void ExitButton()
     {
         EditorApplication.isPlaying = false;
-        //Application.Quit();   Uygulama built edildiði zamanki çýkýþ kodu
+        //Application.Quit();   Uygulama built edildi?i zamanki ??k?? kodu
     }
 
     public void HowToPlay()
@@ -56,7 +56,7 @@ public class Buttons : MonoBehaviour
     public void ExitGame()
     {
         EditorApplication.isPlaying = false;
-        //Application.Quit();   Uygulama built edildiði zamanki çýkýþ kodu
+        //Application.Quit();   Uygulama built edildi?i zamanki ??k?? kodu
     }
 
     public void ResumeGame()
