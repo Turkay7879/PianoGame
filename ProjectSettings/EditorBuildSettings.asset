@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 73c933bd252808f4f8934935c808db88
   - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 57727d40ef3b5534c9d010297af61a3f
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/PauseScene.unity
     guid: d48120f1ab9351843a62b4dfc83be3c8
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 29644cb0e24323742aa48413ed96a7a1
   - enabled: 1
     path: Assets/Scenes/ExitScene.unity
     guid: 3bee8b27d610609458fedaf1c051cbbb

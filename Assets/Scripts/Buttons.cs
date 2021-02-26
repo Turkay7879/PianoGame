@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
     GameManagement pauseManagement;
+    public GameObject canvas;
+    public GameObject parentCanvas;
+
 
     void Start()
     {
@@ -15,7 +18,7 @@ public class Buttons : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     public void StartButton()
@@ -23,15 +26,17 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
-    public void ExitButton()
+    public void MainMenuExit()
     {
-        EditorApplication.isPlaying = false;
+        parentCanvas = GameObject.Find("ParentCanvas").transform.Find("Canvas").gameObject;
+        parentCanvas.SetActive(false);
+        SceneManager.LoadScene("ExitScene", LoadSceneMode.Additive);
         //Application.Quit();   Uygulama built edildi?i zamanki ??k?? kodu
     }
 
     public void HowToPlay()
     {
-
+        SceneManager.LoadScene("HowToPlay");
     }
 
     public void Pause()
@@ -48,9 +53,27 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
-    public void Exit()
+    public void goBack()
     {
-        SceneManager.LoadScene("ExitScene");
+        if (SceneManager.GetActiveScene().name.Equals("MainScene"))
+        {
+            canvas = GameObject.Find("ParentPause").transform.Find("PauseCanvas").gameObject;
+            canvas.SetActive(true);
+            SceneManager.UnloadSceneAsync("ExitScene");
+        }
+
+        else if (SceneManager.GetActiveScene().name.Equals("HowToPlay") || SceneManager.GetActiveScene().name.Equals("EndScene"))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
+        else if (SceneManager.GetActiveScene().name.Equals("MainMenu"))
+        {
+            parentCanvas = GameObject.Find("ParentCanvas").transform.Find("Canvas").gameObject;
+            parentCanvas.SetActive(true);
+            SceneManager.UnloadSceneAsync("ExitScene");
+        }
+
     }
 
     public void ExitGame()
@@ -65,6 +88,14 @@ public class Buttons : MonoBehaviour
         SceneManager.UnloadSceneAsync("PauseScene");
         pauseManagement = GameObject.Find("GameManagement").GetComponent<GameManagement>();
         pauseManagement.isPaused = false;
+    }
+
+    public void PauseMenuExit()
+    {
+        canvas = GameObject.Find("ParentPause").transform.Find("PauseCanvas").gameObject;
+        //tempCanvas = canvas;
+        canvas.SetActive(false);
+        SceneManager.LoadScene("ExitScene", LoadSceneMode.Additive);
     }
 
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManagement : MonoBehaviour
@@ -16,6 +17,7 @@ public class GameManagement : MonoBehaviour
     private AudioSource currentMusic;
     public bool isPaused = false, PauseMusic = true;
     public GameObject canvas, bottomTiles, screenTiles;
+    public static GameObject pauseCanvas;
 
     void Start()
     {   
@@ -54,6 +56,7 @@ public class GameManagement : MonoBehaviour
                 break;
         }
 
+        Time.timeScale = 1.0f;
         InvokeRepeating("IncreaseSpeed", 0f, 10f); // 10 saniyede bir hızlandır
     }
 
@@ -69,6 +72,7 @@ public class GameManagement : MonoBehaviour
                 PlayerPrefs.SetInt("HighScore", Score);
                 PlayerPrefs.Save();
             }
+            SceneManager.LoadScene("EndScene");
         }
 
         if (!CreatedTiles)
@@ -103,40 +107,33 @@ public class GameManagement : MonoBehaviour
         if (randomTile < 10) // 10% şans, değiştirilebilir
         {
             Tiles = (GameObject)Resources.Load("Tiles\\StarTile", typeof(GameObject));
-            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
-            Tiles1.transform.parent = screenTiles.transform;
-            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
         }
         else if (randomTile > 85) // 15% şans, değiştirilebilir
         {
             Tiles = (GameObject)Resources.Load("Tiles\\BonusTile", typeof(GameObject));
-            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
-            Tiles1.transform.parent = screenTiles.transform;
-            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
         }
         else if (randomTile < 15) // 5% şans, değiştirilebilir
         {
             Tiles = (GameObject)Resources.Load("Tiles\\LifeTile", typeof(GameObject));
-            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
-            Tiles1.transform.parent = screenTiles.transform;
-            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
         }
-        //   ... gibi gibi, şansa göre kullanılacak tile prefabı değişecek
         else
         {
             Tiles = (GameObject)Resources.Load("Tiles\\Tile", typeof(GameObject));
-            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
-            Tiles1.transform.parent = screenTiles.transform;
-            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
         }
-        
+
+        Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
+        Tiles1.transform.parent = screenTiles.transform;
+        Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
+
     }
 
     public void Hide()
     {
+        pauseCanvas = GameObject.Find("PauseCanvas");
         canvas.SetActive(false);
+
         bottomTiles.SetActive(false);
-        screenTiles.SetActive(false); //nesnenin i?indeki d??en ta?lar bu kodda yok ediliyo, d?zelt
+        screenTiles.SetActive(false); //nesnenin icindeki dusen taslar bu kodda yok ediliyo, duzelt
         if (PauseMusic)
         {
             currentMusic.Pause();
