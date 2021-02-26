@@ -102,18 +102,34 @@ public class GameManagement : MonoBehaviour
         GameObject Tiles, Tiles1;
         if (randomTile < 10) // 10% şans, değiştirilebilir
         {
-            
+            Tiles = (GameObject)Resources.Load("Tiles\\StarTile", typeof(GameObject));
+            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
+            Tiles1.transform.parent = screenTiles.transform;
+            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
         }
-        else if (randomTile < 15) // 15% şans, değiştirilebilir
+        else if (randomTile > 85) // 15% şans, değiştirilebilir
         {
-            
+            Tiles = (GameObject)Resources.Load("Tiles\\BonusTile", typeof(GameObject));
+            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
+            Tiles1.transform.parent = screenTiles.transform;
+            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
+        }
+        else if (randomTile < 15) // 5% şans, değiştirilebilir
+        {
+            Tiles = (GameObject)Resources.Load("Tiles\\LifeTile", typeof(GameObject));
+            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
+            Tiles1.transform.parent = screenTiles.transform;
+            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
         }
         //   ... gibi gibi, şansa göre kullanılacak tile prefabı değişecek
-
-        Tiles = (GameObject)Resources.Load("Tiles\\Tile", typeof(GameObject));
-        Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
-        Tiles1.transform.parent = screenTiles.transform;
-        Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
+        else
+        {
+            Tiles = (GameObject)Resources.Load("Tiles\\Tile", typeof(GameObject));
+            Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
+            Tiles1.transform.parent = screenTiles.transform;
+            Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
+        }
+        
     }
 
     public void Hide()
