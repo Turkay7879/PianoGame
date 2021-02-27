@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class GameManagement : MonoBehaviour
 {
@@ -10,9 +10,9 @@ public class GameManagement : MonoBehaviour
     private float CreateDelay = 3.00f, CreateInterval = 1.00f;
     private bool CreatedTiles = false;
     public int Lives = 3;
-    public Text LifeText;
+    public TMP_Text LifeText;
     public int Score =0;
-    public Text ScoreText;
+    public TMP_Text ScoreText;
     public AudioSource[] sources;
     private AudioSource currentMusic;
     public bool isPaused = false, PauseMusic = true;
@@ -24,9 +24,9 @@ public class GameManagement : MonoBehaviour
         canvas = GameObject.Find("MainCanvas");
         bottomTiles = GameObject.Find("BottomTiles");
         screenTiles = GameObject.Find("ScreenTiles");
-        LifeText = GameObject.Find("LifeText").GetComponent<Text>();
+        LifeText = GameObject.Find("LifeText").GetComponent<TMP_Text>();
         LifeText.text = ": " + Lives.ToString();
-        ScoreText = GameObject.Find("ScoreText").GetComponent <Text>();
+        ScoreText = GameObject.Find("ScoreText").GetComponent <TMP_Text>();
         ScoreText.text = ": " + Score.ToString();
 
         sources = new AudioSource[4];

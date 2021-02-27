@@ -10,17 +10,6 @@ public class Buttons : MonoBehaviour
     public GameObject canvas;
     public GameObject parentCanvas;
 
-
-    void Start()
-    {
-       
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void StartButton()
     {
         SceneManager.LoadScene("MainScene");
@@ -93,7 +82,6 @@ public class Buttons : MonoBehaviour
     public void PauseMenuExit()
     {
         canvas = GameObject.Find("ParentPause").transform.Find("PauseCanvas").gameObject;
-        //tempCanvas = canvas;
         canvas.SetActive(false);
         SceneManager.LoadScene("ExitScene", LoadSceneMode.Additive);
     }

@@ -15,11 +15,6 @@ public class GameTile : MonoBehaviour
         TileType = gameObject.tag;
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.name.Equals("Background"))

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class UserTile : MonoBehaviour
 {
-    Vector3 Tile1, Tile2, Tile3, Tile4;
+    public Vector3 Tile1, Tile2, Tile3, Tile4;
     Vector3 CurrentPosition;
     public bool Touched = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         Tile1 = GameObject.Find("Tile1").transform.position;
@@ -38,7 +37,6 @@ public class UserTile : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Time.timeScale != 0.0f)

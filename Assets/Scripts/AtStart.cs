@@ -19,10 +19,4 @@ public class AtStart : MonoBehaviour
         int HighScore = PlayerPrefs.GetInt("HighScore");
         HighScoreText.text = "En Yüksek Skor: " + HighScore;
     }
-
-    
-    void Update()
-    {
-        
-    }
 }
