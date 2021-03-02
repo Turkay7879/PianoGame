@@ -1092,6 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fdc04a63d8636b488196da363aa5be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTile: {fileID: 0}
 --- !u!1 &626241400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,15 +1124,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileSpeed: 5
   Lives: 3
-  LifeText: {fileID: 0}
+  LifeText: {fileID: 285360564}
   Score: 0
-  ScoreText: {fileID: 0}
-  sources: []
+  ScoreText: {fileID: 408157607}
+  sources:
+  - {fileID: 1247762843}
+  - {fileID: 1810009662}
+  - {fileID: 1869851413}
+  - {fileID: 863811992}
   isPaused: 0
   PauseMusic: 1
-  canvas: {fileID: 0}
-  bottomTiles: {fileID: 0}
-  screenTiles: {fileID: 0}
+  canvas: {fileID: 626062414}
+  bottomTiles: {fileID: 833227105}
+  screenTiles: {fileID: 791003500}
 --- !u!4 &626241402
 Transform:
   m_ObjectHideFlags: 0
@@ -1177,10 +1182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd7950853ea04dcfb8085f8d0759ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tile1: {x: 0, y: 0, z: 0}
-  Tile2: {x: 0, y: 0, z: 0}
-  Tile3: {x: 0, y: 0, z: 0}
-  Tile4: {x: 0, y: 0, z: 0}
+  Tile1: {x: -1.4787, y: -4.232, z: -1.1}
+  Tile2: {x: -0.504, y: -4.234, z: -1.1}
+  Tile3: {x: 0.4953, y: -4.237, z: -1.1}
+  Tile4: {x: 1.498, y: -4.237, z: -1.1}
   Touched: 0
 --- !u!61 &669010276
 BoxCollider2D:
@@ -1351,6 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fdc04a63d8636b488196da363aa5be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTile: {fileID: 669010274}
 --- !u!1 &863811989
 GameObject:
   m_ObjectHideFlags: 0

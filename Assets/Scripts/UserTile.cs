@@ -10,28 +10,19 @@ public class UserTile : MonoBehaviour
 
     void Start()
     {
-        Tile1 = GameObject.Find("Tile1").transform.position;
-        Tile1.z = -1.1f;
-        Tile2 = GameObject.Find("Tile2").transform.position;
-        Tile2.z = -1.1f;
-        Tile3 = GameObject.Find("Tile3").transform.position;
-        Tile3.z = -1.1f;
-        Tile4 = GameObject.Find("Tile4").transform.position;
-        Tile4.z = -1.1f;
-
         int randomStart = Random.Range(1, 5);
         switch (randomStart) {
             case 1:
-                GameObject.Find("Player").transform.position = Tile1;
+                gameObject.transform.position = Tile1;
                 break;
             case 2:
-                GameObject.Find("Player").transform.position = Tile2;
+                gameObject.transform.position = Tile2;
                 break;
             case 3:
-                GameObject.Find("Player").transform.position = Tile3;
+                gameObject.transform.position = Tile3;
                 break;
             default:
-                GameObject.Find("Player").transform.position = Tile4;
+                gameObject.transform.position = Tile4;
                 break;
         }
         

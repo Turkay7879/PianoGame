@@ -9,32 +9,17 @@ public class GameManagement : MonoBehaviour
     public float TileSpeed = 5.00f;
     private float CreateDelay = 3.00f, CreateInterval = 1.00f;
     private bool CreatedTiles = false;
-    public int Lives = 3;
-    public TMP_Text LifeText;
-    public int Score =0;
-    public TMP_Text ScoreText;
-    public AudioSource[] sources;
+    public int Lives = 3, Score = 0;
+
+    public TMP_Text LifeText, ScoreText;
+    public AudioSource[] sources = new AudioSource[4];
     private AudioSource currentMusic;
     public bool isPaused = false, PauseMusic = true;
     public GameObject canvas, bottomTiles, screenTiles;
     public static GameObject pauseCanvas;
 
     void Start()
-    {   
-        canvas = GameObject.Find("MainCanvas");
-        bottomTiles = GameObject.Find("BottomTiles");
-        screenTiles = GameObject.Find("ScreenTiles");
-        LifeText = GameObject.Find("LifeText").GetComponent<TMP_Text>();
-        LifeText.text = ": " + Lives.ToString();
-        ScoreText = GameObject.Find("ScoreText").GetComponent <TMP_Text>();
-        ScoreText.text = ": " + Score.ToString();
-
-        sources = new AudioSource[4];
-        for (int i = 0; i < 4; i++)
-        {
-            sources[i] = GameObject.Find("Music" + (i + 1).ToString()).GetComponent<AudioSource>();
-        }
-        
+    {  
         int num = Random.Range(1, 5);
         switch(num)
         {
@@ -66,6 +51,7 @@ public class GameManagement : MonoBehaviour
         {
             Time.timeScale = 0;
             currentMusic.Stop();
+            CancelInvoke();
             int lastHighScore = PlayerPrefs.GetInt("HighScore");
             if (Score > lastHighScore)
             {
@@ -131,9 +117,9 @@ public class GameManagement : MonoBehaviour
     {
         pauseCanvas = GameObject.Find("PauseCanvas");
         canvas.SetActive(false);
-
         bottomTiles.SetActive(false);
-        screenTiles.SetActive(false); //nesnenin icindeki dusen taslar bu kodda yok ediliyo, duzelt
+        screenTiles.transform.localScale = new Vector3(0,0,0);
+
         if (PauseMusic)
         {
             currentMusic.Pause();
@@ -145,7 +131,7 @@ public class GameManagement : MonoBehaviour
     {
         canvas.SetActive(true);
         bottomTiles.SetActive(true);
-        screenTiles.SetActive(true);
+        screenTiles.transform.localScale = new Vector3(1.013592f, -3.855601f, -0.3281724f);
         if (!PauseMusic)
         {
             currentMusic.UnPause();
