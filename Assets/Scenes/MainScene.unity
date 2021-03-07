@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325, y: 838}
+  m_AnchoredPosition: {x: 325, y: 850}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28865895
@@ -336,14 +336,14 @@ RectTransform:
   m_GameObject: {fileID: 195423061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 626062418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -427, y: 838}
+  m_AnchoredPosition: {x: -427, y: 850}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195423063
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b2b4ce75eaca43a4d8b191ad6552f078, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2813d5bb70bb5a94e960f272b43ace4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -488,7 +488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 843}
+  m_AnchoredPosition: {x: 475, y: 860}
   m_SizeDelta: {x: 191.3, y: 93.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &285360564
@@ -656,7 +656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: 843}
+  m_AnchoredPosition: {x: 97, y: 865}
   m_SizeDelta: {x: 248.8925, y: 81.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408157607
@@ -1133,6 +1133,7 @@ MonoBehaviour:
   - {fileID: 863811992}
   isPaused: 0
   PauseMusic: 1
+  mixer: {fileID: 24100000, guid: 95c523d7d4a35654b96e0c4f4d4f5e74, type: 2}
   canvas: {fileID: 626062414}
   bottomTiles: {fileID: 833227105}
   screenTiles: {fileID: 791003500}
@@ -2297,7 +2298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85, y: 841}
+  m_AnchoredPosition: {x: -85, y: 855}
   m_SizeDelta: {x: 150, y: 136.1248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733947616

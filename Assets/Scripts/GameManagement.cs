@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Audio;
 
 public class GameManagement : MonoBehaviour
 {
@@ -15,11 +16,16 @@ public class GameManagement : MonoBehaviour
     public AudioSource[] sources = new AudioSource[4];
     private AudioSource currentMusic;
     public bool isPaused = false, PauseMusic = true;
+    public AudioMixer mixer;
+
     public GameObject canvas, bottomTiles, screenTiles;
     public static GameObject pauseCanvas;
 
     void Start()
     {
+        float lastVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        mixer.SetFloat("MusicVol", Mathf.Log10(lastVolume) * 30);
+
         int num = Random.Range(1, 5);
         switch(num)
         {
