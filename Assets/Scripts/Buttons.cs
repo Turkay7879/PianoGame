@@ -81,9 +81,9 @@ public class Buttons : MonoBehaviour
 
     public void PauseMenuExit()
     {
-        canvas = GameObject.Find("ParentPause").transform.Find("PauseCanvas").gameObject;
-        canvas.SetActive(false);
-        SceneManager.LoadScene("ExitScene", LoadSceneMode.Additive);
+        //canvas = GameObject.Find("ParentPause").transform.Find("PauseCanvas").gameObject;
+        //canvas.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

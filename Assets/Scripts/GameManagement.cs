@@ -19,7 +19,7 @@ public class GameManagement : MonoBehaviour
     public static GameObject pauseCanvas;
 
     void Start()
-    {  
+    {
         int num = Random.Range(1, 5);
         switch(num)
         {
@@ -107,7 +107,7 @@ public class GameManagement : MonoBehaviour
             Tiles = (GameObject)Resources.Load("Tiles\\Tile", typeof(GameObject));
         }
 
-        Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.3f, -1f), Quaternion.identity);
+        Tiles1 = Instantiate(Tiles, new Vector3(spot, 3.2f, -1f), Quaternion.identity);
         Tiles1.transform.parent = screenTiles.transform;
         Tiles1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -TileSpeed);
 
