@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325, y: 850}
+  m_AnchoredPosition: {x: 310, y: 850}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28865895
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.95703095, b: 0.95703095, a: 1}
+  m_Color: {r: 0.02745098, g: 0.02745098, b: 0.02745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -488,8 +488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 860}
-  m_SizeDelta: {x: 191.3, y: 93.7}
+  m_AnchoredPosition: {x: 480, y: 840}
+  m_SizeDelta: {x: 230, y: 93.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &285360564
 MonoBehaviour:
@@ -513,8 +513,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ': 3'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7d34690c322284e8fbbecf05744047b3, type: 2}
-  m_sharedMaterial: {fileID: -4558164946344279871, guid: 7d34690c322284e8fbbecf05744047b3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 27ae5a984f2e24e32895f0215fd67b3e, type: 2}
+  m_sharedMaterial: {fileID: 7786738635577745493, guid: 27ae5a984f2e24e32895f0215fd67b3e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -10
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -656,8 +656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: 865}
-  m_SizeDelta: {x: 248.8925, y: 81.2}
+  m_AnchoredPosition: {x: 95, y: 843}
+  m_SizeDelta: {x: 270, y: 81.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408157607
 MonoBehaviour:
@@ -681,8 +681,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ': 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7d34690c322284e8fbbecf05744047b3, type: 2}
-  m_sharedMaterial: {fileID: -4558164946344279871, guid: 7d34690c322284e8fbbecf05744047b3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 27ae5a984f2e24e32895f0215fd67b3e, type: 2}
+  m_sharedMaterial: {fileID: 7786738635577745493, guid: 27ae5a984f2e24e32895f0215fd67b3e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -706,8 +706,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -10
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1020,12 +1020,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2298,7 +2298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85, y: 855}
+  m_AnchoredPosition: {x: -100, y: 855}
   m_SizeDelta: {x: 150, y: 136.1248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733947616

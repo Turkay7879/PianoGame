@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,7 +19,6 @@ public class Buttons : MonoBehaviour
         parentCanvas = GameObject.Find("ParentCanvas").transform.Find("Canvas").gameObject;
         parentCanvas.SetActive(false);
         SceneManager.LoadScene("ExitScene", LoadSceneMode.Additive);
-        //Application.Quit();   Uygulama built edildi?i zamanki ??k?? kodu
     }
 
     public void HowToPlay()
@@ -67,8 +65,8 @@ public class Buttons : MonoBehaviour
 
     public void ExitGame()
     {
-        EditorApplication.isPlaying = false;
-        //Application.Quit();   Uygulama built edildi?i zamanki ??k?? kodu
+        //EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 
     public void ResumeGame()
@@ -81,8 +79,6 @@ public class Buttons : MonoBehaviour
 
     public void PauseMenuExit()
     {
-        //canvas = GameObject.Find("ParentPause").transform.Find("PauseCanvas").gameObject;
-        //canvas.SetActive(false);
         SceneManager.LoadScene("MainMenu");
     }
 
