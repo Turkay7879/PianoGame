@@ -36,7 +36,6 @@ public class Buttons : MonoBehaviour
 
     public void Replay()
     {
-        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainScene");
     }
 

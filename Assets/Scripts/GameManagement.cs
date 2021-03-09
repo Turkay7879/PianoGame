@@ -25,7 +25,7 @@ public class GameManagement : MonoBehaviour
     {
         float lastVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
         mixer.SetFloat("MusicVol", Mathf.Log10(lastVolume) * 30);
-
+        AudioListener.volume = 1.0f;
         int num = Random.Range(1, 5);
         switch(num)
         {
