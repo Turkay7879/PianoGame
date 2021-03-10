@@ -9,14 +9,7 @@ public class AtStart : MonoBehaviour
 
     void Start()
     {
-        HighScoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
-        if (!PlayerPrefs.HasKey("HighScore"))
-        {
-            PlayerPrefs.SetInt("HighScore", 0);
-            PlayerPrefs.Save();
-        }
-
-        int HighScore = PlayerPrefs.GetInt("HighScore");
-        HighScoreText.text = "En Yüksek Skor: " + HighScore;
+        int HighScore = PlayerPrefs.GetInt("HighScore", 0);
+        HighScoreText.text = "En Yuksek Skor: " + HighScore;
     }
 }

@@ -70,7 +70,7 @@ public class Buttons : MonoBehaviour
 
     public void ResumeGame()
     {
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
         SceneManager.UnloadSceneAsync("PauseScene");
         pauseManagement = GameObject.Find("GameManagement").GetComponent<GameManagement>();
         pauseManagement.isPaused = false;
